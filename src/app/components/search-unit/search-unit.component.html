@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="planetSelect">
+    <planet-select [id]="id"></planet-select>
+  </div>
+
+
+  <div *ngIf="searchUnit && searchUnit.selectedPlanet; else selectPlanetHelp">
+    <div *ngIf="searchUnit.selectedPlanet.name != ''">
+      <div class="form-group">
+        <vehicle-select [id]="id"></vehicle-select>
+      </div>
+    </div>
+  </div>
+
+ </div>
